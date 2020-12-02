@@ -1,12 +1,21 @@
+function getRandom(min, max) {  
+    return Math.floor(Math.random() * (max - min)) + min; 
+  }
+
+let num = getRandom(101, 9999)
+
 function addNums(num) {
-    let rem;
-    let sum = 0;
-    for (let i = 0; i < num; ) {
+    let remainder ;
+    let result = "";
+
+    while (num > 0) {
+
         rem = num % 10;
-        a = num / 10 - rem / 10;
-        num = a;
-        sum += rem;
+        num = (num - rem) / 10;        
+        result += rem.toString();
     }
-    return sum;
+    
+    return result.toString();
 }
-console.log(addNums(6541))
+
+console.log(addNums(num));

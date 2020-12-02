@@ -1,21 +1,21 @@
+function getRandom(min, max) {  
+    return Math.floor(Math.random() * (max - min)) + min; 
+  }
+
+let a = getRandom(1, 200)
+
 function primeNum(a) {
-    let txt = ""
+    let answer = "";
 
     for (let i = 2; i < a; i++) {
-        if (a%i == 0) {
-            
-            
-             `${a} ne prostoe cislo`
+        if (a % i == 0) {
+            answer = `${a} is a composite number.`;
             break;
         } else {
-            txt = `${a} prostoe cislo`
-        }
-
-          
-            
+            answer = `${a} is a prime number.`;
+        }     
     }
-    return txt;
-        
+    return answer;        
 }
 
-console.log(primeNum(121));
+console.log(primeNum(a));

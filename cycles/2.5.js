@@ -1,4 +1,10 @@
-function addNums(num) {
+function getRandom(min, max) {  
+    return Math.floor(Math.random() * (max - min)) + min; 
+  }
+
+let num = getRandom(21, 999)
+
+function mirrorDisplay(num) {
     let rem;
     let sum = 0;
     for (let i = 0; i < num; ) {
@@ -9,4 +15,4 @@ function addNums(num) {
     }
     return sum;
 }
-console.log(addNums(6541))
+console.log(mirrorDisplay(num))

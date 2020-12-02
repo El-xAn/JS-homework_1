@@ -1,3 +1,9 @@
+function getRandom(min, max) {  
+  return Math.floor(Math.random() * (max - min)) + min; 
+}
+
+let num = getRandom(1, 10)
+
 function faktorial(num) {
   if (num == 0) {
     return 1;
@@ -10,3 +16,4 @@ function faktorial(num) {
     return j ;
   }
 }
+console.log(faktorial(num))
