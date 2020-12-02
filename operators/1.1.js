@@ -1,12 +1,18 @@
+function getRandom(min, max) {  
+    return Math.floor(Math.random() * (max - min)) + min; 
+  }
+
+let a = getRandom(1, 10)
+let b = getRandom(1, 10)
+
 function checkNumber(a, b) {
-    if (typeof a !== 'number' || typeof b !== 'number') {
+    if (a % 2 === 0) {
 
-        return 'Wrong input';
-    } else if (a % 2 === 0) {
-
-        return a * b;
+        console.log(a * b);
     } else if (a % 2 !== 0) {
 
-        return a + b;
+        console.log(a + b);
     }
 }
+
+checkNumber(a, b)

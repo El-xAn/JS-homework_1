@@ -1,16 +1,21 @@
 function primeNum(a) {
-    
+    let txt = ""
+
     for (let i = 2; i < a; i++) {
-        if (a % i == 0) {
-            // return i;
-    console.log(`${a} ne prostoe cislo, deliteli ${i}`);
-        
-        } else {
-            // return a;
-    console.log(`${a} prostoe cislo`)
+        if (a%i == 0) {
             
+            
+             `${a} ne prostoe cislo`
+            break;
+        } else {
+            txt = `${a} prostoe cislo`
         }
+
+          
+            
     }
+    return txt;
+        
 }
 
-primeNum(12);
+console.log(primeNum(121));

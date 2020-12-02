@@ -9,3 +9,4 @@ function addNums(num) {
     }
     return sum;
 }
+console.log(addNums(6541))
