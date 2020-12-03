@@ -2,7 +2,7 @@ function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min)) + min; 
   }
 
-let num = getRandom(1, 8)
+let num = getRandom(1, 8);
 
 function dayOfWeek(num) {
     switch(num) {
@@ -30,4 +30,4 @@ function dayOfWeek(num) {
     }
 }
 
-console.log(dayOfWeek(num))
+console.log(dayOfWeek(num));

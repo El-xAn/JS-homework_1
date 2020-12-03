@@ -1,8 +1,8 @@
-function getRandom(min, max) {  
-    return Math.floor(Math.random() * (max - min)) + min; 
+function getRandom() {  
+    return Math.floor(Math.random() * 200); 
   }
 
-let a = getRandom(1, 200)
+let a = getRandom()
 
 function primeNum(a) {
     let answer = "";
