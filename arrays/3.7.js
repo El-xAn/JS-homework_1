@@ -1,22 +1,20 @@
-function countUnevenElem(numbers) {
+function getRandom(min, max) {  
+    return Math.floor(Math.random() * (max - min)) + min; 
+}
 
-    if (!Array.isArray(numbers) || numbers == null) {
+let arr = [];
+for(let i = 0; i < 6; i++) {
+    let num = getRandom(-10, 10)
+    arr[i] = num;
+}
+console.log(arr);
 
-        return 'It is not array';
-    } else {
-        let index = 0;
+let index = 0;
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 != 0) {
 
-        for (let i = 0; i < numbers.length; i++) {
-
-            if (typeof numbers[i] != 'number') {
-
-                return 'There is something wrong';
-            } else if (numbers[i] % 2 != 0) {
-
-                index++;                
-            }
-        }
-
-        return index;
+        index++;                
     }
 }
+
+console.log(`количество нечетных элементов массива: ${index}`)

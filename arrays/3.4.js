@@ -1,21 +1,24 @@
-function indexOfArraysMax(numbers) {
-    if (!Array.isArray(numbers) || numbers == null) {
-        return 'It is not array';
-    } else {
-        let index = 0;
+function getRandom(min, max) {  
+    return Math.floor(Math.random() * (max - min)) + min; 
+}
 
-        for (let i = 0; i < numbers.length; i++) {
-            for (let j = 1; j < numbers.length; j++) {
+let arr = [];
+for(let i = 0; i < 5; i++) {
+    let num = getRandom(-10, 10)
+    arr[i] = num;
+}
+console.log(arr);
 
-                if (typeof numbers[i] !== 'number') {
-                    return 'There is something wrong';
-                } else if (numbers[0] < numbers[j]) {
-                    numbers[0] = numbers[j];
-                    index = j;
-                }
-            }
+let indexMax = 0;
+
+for (let i = 0; i < arr.length; i++) {
+    for (let j = 1; j < arr.length; j++) {
+
+        if (arr[0] < arr[j]) {
+            arr[0] = arr[j];
+            indexMax = j;
         }
-
-        return index;
     }
 }
+
+console.log(`индекс максимального элемента массива: ${indexMax}`)

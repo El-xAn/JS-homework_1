@@ -1,27 +1,26 @@
-function sortingBubble(numbers) {
-    if (!Array.isArray(numbers) || numbers == null) {
+function getRandom(min, max) {  
+    return Math.floor(Math.random() * (max - min)) + min; 
+}
 
-        return 'It is not array';
-    } else {
+let arr = [];
+for(let i = 0; i < 6; i++) {
+    let num = getRandom(-10, 10)
+    arr[i] = num;
+}
+console.log(arr);
 
-        for (let i = 0; i < numbers.length; i++) {
+        for (let i = 0; i < arr.length; i++) {
 
-            if (typeof numbers[i] !== 'number') {
-
-                return 'There is something wrong';
-            } else {
                 let temp;
 
-                for (let j = i + 1; j < numbers.length; j++) {
-                    if (numbers[i] > numbers[j]) {
-                        temp = numbers[i];
-                        numbers[i] = numbers[j];
-                        numbers[j] = temp;
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[i] > arr[j]) {
+                        temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
                     }
                 }
-            }
+            
         }
 
-        return numbers;
-    }
-}
+console.log(`Oтсортированный массив (пузырьком (Bubble)): [${arr}]`)

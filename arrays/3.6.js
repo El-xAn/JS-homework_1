@@ -1,26 +1,20 @@
-function revers(numbers) {
-
-    if (!Array.isArray(numbers) || numbers == null) {
-
-        return 'It is not array';
-    } else {
-        let temp;
-
-        for (let i = 0; i < numbers.length; i++) {
-            for (let j = 0; j < numbers.length / 2; j++) {
-                if (typeof numbers[i] !== 'number') {
-
-                    return 'There is something wrong';
-                } else {
-
-                    temp = numbers[j];
-                    numbers[j] = numbers[numbers.length - 1 - j];
-                    numbers[numbers.length - 1 - j] = temp;
-                }
-            }
-        }
-
-        return numbers;
-    }
+function getRandom(min, max) {  
+    return Math.floor(Math.random() * (max - min)) + min; 
 }
-console.log(revers([1, -5, 9, 3, 4, -2, 21, -34]))
+
+let arr = [];
+for(let i = 0; i < 5; i++) {
+    let num = getRandom(-10, 10)
+    arr[i] = num;
+}
+console.log(arr);
+
+let temp;        
+for (let j = 0; j < arr.length / 2; j++) {
+   
+    temp = arr[j];
+    arr[j] = arr[arr.length - 1 - j];
+    arr[arr.length - 1 - j] = temp;                
+}        
+
+console.log(`реверс массива: [${arr}]`)

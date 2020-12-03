@@ -1,3 +1,9 @@
+function getRandom(min, max) {  
+    return Math.floor(Math.random() * (max - min)) + min; 
+  }
+
+let num = getRandom(1, 8)
+
 function dayOfWeek(num) {
     switch(num) {
         case 1:
@@ -21,7 +27,7 @@ function dayOfWeek(num) {
         case 7:
             return 'Monday';
             break;
-        default:
-            return 'Wrong input.';
     }
 }
+
+console.log(dayOfWeek(num))
